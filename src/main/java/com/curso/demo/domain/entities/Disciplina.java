@@ -2,14 +2,8 @@ package com.curso.demo.domain.entities;
 
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-
-@Entity
 public class Disciplina {
-    @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.AUTO)
+
     private UUID idDisciplina;
     private String nomeDisciplina;
     private String descricao;
