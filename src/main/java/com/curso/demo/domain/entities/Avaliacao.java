@@ -10,15 +10,14 @@ public class Avaliacao {
     private double notaMinimaAprovacao;
     private int quantidadeTentativas;
     private int tempoLimite;
-    private String statusAvaliacao;
-    private boolean status;
+    private boolean statusAvaliacao;
 
     public Avaliacao() {
     }
 
     public Avaliacao(Long idAvaliacao, String titulo, String tipo, String disciplinaRelacionada,
             double notaMaxima, double notaMinimaAprovacao, int quantidadeTentativas,
-            int tempoLimite, String statusAvaliacao, boolean status) {
+            int tempoLimite, boolean statusAvaliacao) {
         this.idAvaliacao = idAvaliacao;
         this.titulo = titulo;
         this.tipo = tipo;
@@ -28,7 +27,6 @@ public class Avaliacao {
         this.quantidadeTentativas = quantidadeTentativas;
         this.tempoLimite = tempoLimite;
         this.statusAvaliacao = statusAvaliacao;
-        this.status = status;
     }
 
     public Long getIdAvaliacao() {
@@ -63,16 +61,12 @@ public class Avaliacao {
         return tempoLimite;
     }
 
-    public String getStatusAvaliacao() {
+    public boolean getStatusAvaliacao() {
         return statusAvaliacao;
     }
 
-    public boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setStatusAvaliacao(boolean statusAvaliacao) {
+        this.statusAvaliacao = statusAvaliacao;
     }
 
 }
