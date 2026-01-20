@@ -2,8 +2,8 @@ package com.curso.demo.domain.repositories;
 
 import java.util.Optional;
 
-public interface Progresso {
-    Optional<Progresso> findById(Long id);
+public interface ProgressoDomainRepository {
+    Optional<ProgressoDomainRepository> findById(Long id);
 
-    void save(Progresso progresso);
+    void save(ProgressoDomainRepository progresso);
 }
