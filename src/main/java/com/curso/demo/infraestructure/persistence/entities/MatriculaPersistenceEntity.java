@@ -1,17 +1,6 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
 public class MatriculaPersistenceEntity {
-    /*
-     * private Long idMatricula;
-     * private String usuario;
-     * private String curso;
-     * private String statusMatricula;
-     * private String dataMatricula;
-     * private Timestamp dataInicio;
-     * private Timestamp dataConclusao;
-     * private String progressoGeral;
-     * private String ultimaAulaAcessada;
-     */
     private Long idMatricula;
     private String curso;
     private String dataMatricula;
