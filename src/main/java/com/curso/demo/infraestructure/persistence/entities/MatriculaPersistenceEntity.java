@@ -1,6 +1,13 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "matricula")
 public class MatriculaPersistenceEntity {
+    @Id
     private Long idMatricula;
     private String curso;
     private String dataMatricula;

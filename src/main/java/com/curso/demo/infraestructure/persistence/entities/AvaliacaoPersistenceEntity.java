@@ -1,9 +1,13 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "avaliacao")
 public class AvaliacaoPersistenceEntity {
+    @Id
     private Long idAvaliacao;
     private String titulo;
     private boolean statusAvaliacao;
