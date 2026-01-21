@@ -3,15 +3,8 @@ package com.curso.demo.domain.entities;
 import java.security.Timestamp;
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-
-@Entity
 public class Usuario {
 
-    @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.AUTO)
     private UUID idUsuario;
     private String username;
     private String email;
@@ -24,6 +17,7 @@ public class Usuario {
     private String fotoDePerfil;
     private String preferenciasDeIdioma;
     private Timestamp ultimoAcesso;
+    private Progresso progresso;
 
     public Usuario() {
     }
@@ -31,7 +25,7 @@ public class Usuario {
     public Usuario(UUID idUsuario, String username, String email, String password, UsuarioRole role,
             String nomeDeExibicao,
             String status, Timestamp dataCriacao, Timestamp dataUltimaAtualizacao, String fotoDePerfil,
-            String preferenciasDeIdioma, Timestamp ultimoAcesso) {
+            String preferenciasDeIdioma, Timestamp ultimoAcesso, Progresso progresso) {
         this.idUsuario = idUsuario;
         this.username = username;
         this.email = email;
@@ -44,6 +38,7 @@ public class Usuario {
         this.fotoDePerfil = fotoDePerfil;
         this.preferenciasDeIdioma = preferenciasDeIdioma;
         this.ultimoAcesso = ultimoAcesso;
+        this.progresso = progresso;
     }
 
     public UUID getIdUsuario() {
@@ -130,6 +125,14 @@ public class Usuario {
 
     public Timestamp getUltimoAcesso() {
         return ultimoAcesso;
+    }
+
+    public Progresso getProgresso() {
+        return progresso;
+    }
+
+    public void setProgresso(Progresso progresso) {
+        this.progresso = progresso;
     }
 
 }
