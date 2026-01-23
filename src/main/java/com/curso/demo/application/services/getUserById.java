@@ -1,5 +1,8 @@
 package com.curso.demo.application.services;
 
+import java.util.UUID;
+
+import com.curso.demo.domain.entities.Usuario;
 import com.curso.demo.domain.repositories.UsuarioDomainRepository;
 
 public class GetUserById {
@@ -11,6 +14,11 @@ public class GetUserById {
 
     public UsuarioDomainRepository usuarioDomainRepository() {
         return usuarioDomainRepository;
+    }
+
+    public Usuario executar(UUID userId) {
+        return usuarioDomainRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 
 }
