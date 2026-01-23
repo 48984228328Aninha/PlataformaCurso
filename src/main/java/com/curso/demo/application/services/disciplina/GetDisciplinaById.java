@@ -1,4 +1,4 @@
-package com.curso.demo.application.services;
+package com.curso.demo.application.services.disciplina;
 
 import com.curso.demo.domain.entities.Disciplina;
 import com.curso.demo.domain.repositories.DisciplinaDomainRepository;
@@ -8,6 +8,10 @@ public class GetDisciplinaById {
 
     public GetDisciplinaById(DisciplinaDomainRepository disciplinaDomainRepository) {
         this.disciplinaDomainRepository = disciplinaDomainRepository;
+    }
+
+    public DisciplinaDomainRepository getDisciplinaDomainRepository() {
+        return disciplinaDomainRepository;
     }
 
     public Disciplina executar(Long disciplinaId) {
