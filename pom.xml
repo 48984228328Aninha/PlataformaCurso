@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<spring-cloud.version>2025.1.0</spring-cloud.version>
+		<spring-modulith.version>2.0.1</spring-modulith.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -142,6 +143,13 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.modulith</groupId>
+				<artifactId>spring-modulith-bom</artifactId>
+				<version>${spring-modulith.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
