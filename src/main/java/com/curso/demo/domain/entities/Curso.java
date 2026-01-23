@@ -5,12 +5,12 @@ import java.util.UUID;
 
 public class Curso {
 
-    private String nome;
-    private UUID id;
-    private String categoria;
-    private String descricao;
-    private String objetivo;
-    private String titulo;
+    private String nomeCurso;
+    private UUID idCurso;
+    private String categoriaCurso;
+    private String descricaoCurso;
+    private String objetivoCurso;
+    private String tituloCurso;
     private String publicoAlvo;
     private String nivel;
     private String cargaHoraria;
@@ -28,18 +28,19 @@ public class Curso {
     public Curso() {
     }
 
-    public Curso(String nome, UUID id, String categoria, String descricao, String objetivo, String titulo,
+    public Curso(String nomeCurso, UUID idCurso, String categoriaCurso, String descricaoCurso, String objetivoCurso,
+            String tituloCurso,
             String publicoAlvo,
             String nivel, String cargaHoraria, String idioma, String status,
             String instrutorResponsavel, String dataCriacao, Timestamp dataPublicacao,
             Timestamp dataAtualizacao, String avaliacaoMedia, String quantidadeAlunos,
             String requisitosPrevios, boolean certificadoDisponivel) {
-        this.nome = nome;
-        this.id = id;
-        this.categoria = categoria;
-        this.descricao = descricao;
-        this.objetivo = objetivo;
-        this.titulo = titulo;
+        this.nomeCurso = nomeCurso;
+        this.idCurso = idCurso;
+        this.categoriaCurso = categoriaCurso;
+        this.descricaoCurso = descricaoCurso;
+        this.objetivoCurso = objetivoCurso;
+        this.tituloCurso = tituloCurso;
         this.publicoAlvo = publicoAlvo;
         this.nivel = nivel;
         this.cargaHoraria = cargaHoraria;
@@ -56,47 +57,47 @@ public class Curso {
     }
 
     public String getNome() {
-        return nome;
+        return nomeCurso;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String nomeCurso) {
+        this.nomeCurso = nomeCurso;
     }
 
     public UUID getId() {
-        return id;
+        return idCurso;
     }
 
     public String getCategoria() {
-        return categoria;
+        return categoriaCurso;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategoria(String categoriaCurso) {
+        this.categoriaCurso = categoriaCurso;
     }
 
     public String getDescricao() {
-        return descricao;
+        return descricaoCurso;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescricao(String descricaoCurso) {
+        this.descricaoCurso = descricaoCurso;
     }
 
     public String getObjetivo() {
-        return objetivo;
+        return objetivoCurso;
     }
 
-    public void setObjetivo(String objetivo) {
-        this.objetivo = objetivo;
+    public void setObjetivo(String objetivoCurso) {
+        this.objetivoCurso = objetivoCurso;
     }
 
     public String getTitulo() {
-        return titulo;
+        return tituloCurso;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitulo(String tituloCurso) {
+        this.tituloCurso = tituloCurso;
     }
 
     public String getPublicoAlvo() {
