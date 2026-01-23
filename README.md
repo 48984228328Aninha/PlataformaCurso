@@ -20,7 +20,7 @@ Este é um sistema de backend robusto para gestão de cursos online, permitindo 
 * **Migrações:** Flyway
 * **Documentação:** Swagger (OpenAPI 3)
 * **Containerização:** Docker & Docker Compose
-* **Testes:** JUnit 5, Mockito e RestAssured
+* **Testes:** JUnit 5, Mockito
 
 ## 🏗️ Arquitetura do Projeto
 
