@@ -3,7 +3,7 @@ package com.curso.demo.domain.entities;
 public class Avaliacao {
 
     private Long idAvaliacao;
-    private String titulo;
+    private String tituloAvaliacao;
     private String tipo;
     private String disciplinaRelacionada;
     private double notaMaxima;
@@ -15,11 +15,11 @@ public class Avaliacao {
     public Avaliacao() {
     }
 
-    public Avaliacao(Long idAvaliacao, String titulo, String tipo, String disciplinaRelacionada,
+    public Avaliacao(Long idAvaliacao, String tituloAvaliacao, String tipo, String disciplinaRelacionada,
             double notaMaxima, double notaMinimaAprovacao, int quantidadeTentativas,
             int tempoLimite, boolean statusAvaliacao) {
         this.idAvaliacao = idAvaliacao;
-        this.titulo = titulo;
+        this.tituloAvaliacao = tituloAvaliacao;
         this.tipo = tipo;
         this.disciplinaRelacionada = disciplinaRelacionada;
         this.notaMaxima = notaMaxima;
@@ -34,7 +34,7 @@ public class Avaliacao {
     }
 
     public String getTitulo() {
-        return titulo;
+        return tituloAvaliacao;
     }
 
     public String getTipo() {
