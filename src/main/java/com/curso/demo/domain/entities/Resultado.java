@@ -1,12 +1,14 @@
 package com.curso.demo.domain.entities;
 
+import java.security.Timestamp;
+
 public class Resultado {
     private Long idResultado;
     private String usuario;
     private String avaliacao;
     private Double notaObtida;
     private String status;
-    private String dataSubmissao;
+    private Timestamp dataSubmissao;
     private int tentativa;
     private String feedback;
 
@@ -14,7 +16,7 @@ public class Resultado {
     }
 
     public Resultado(Long idResultado, String usuario, String avaliacao, Double notaObtida,
-            String status, String dataSubmissao, int tentativa, String feedback) {
+            String status, Timestamp dataSubmissao, int tentativa, String feedback) {
         this.idResultado = idResultado;
         this.usuario = usuario;
         this.avaliacao = avaliacao;
@@ -45,7 +47,7 @@ public class Resultado {
         return status;
     }
 
-    public String getDataSubmissao() {
+    public Timestamp getDataSubmissao() {
         return dataSubmissao;
     }
 
