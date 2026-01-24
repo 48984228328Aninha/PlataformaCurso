@@ -17,7 +17,6 @@ Este é um sistema de backend robusto para gestão de cursos online, permitindo 
 * **Framework:** Spring Boot 3.x
 * **Segurança:** Spring Security & JWT (JSON Web Token)
 * **Banco de Dados:** PostgreSQL
-* **Migrações:** Flyway
 * **Documentação:** Swagger (OpenAPI 3)
 * **Containerização:** Docker & Docker Compose
 * **Testes:** JUnit 5, Mockito
