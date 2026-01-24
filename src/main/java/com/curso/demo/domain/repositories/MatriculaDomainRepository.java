@@ -2,8 +2,10 @@ package com.curso.demo.domain.repositories;
 
 import java.util.Optional;
 
-public interface MatriculaDomainRepository {
-    Optional<MatriculaDomainRepository> findById(Long id);
+import com.curso.demo.domain.entities.Matricula;
 
-    void save(MatriculaDomainRepository matricula);
+public interface MatriculaDomainRepository {
+    Optional<Matricula> findById(Long id);
+
+    void save(Matricula matricula);
 }
