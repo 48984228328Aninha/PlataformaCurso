@@ -6,16 +6,16 @@ public class Disciplina {
 
     private UUID idDisciplina;
     private String nomeDisciplina;
-    private String descricao;
+    private String descricaoDisciplina;
     private int cargaHoraria;
 
     public Disciplina() {
     }
 
-    public Disciplina(UUID idDisciplina, String nomeDisciplina, String descricao, int cargaHoraria) {
+    public Disciplina(UUID idDisciplina, String nomeDisciplina, String descricaoDisciplina, int cargaHoraria) {
         this.idDisciplina = idDisciplina;
         this.nomeDisciplina = nomeDisciplina;
-        this.descricao = descricao;
+        this.descricaoDisciplina = descricaoDisciplina;
         this.cargaHoraria = cargaHoraria;
     }
 
@@ -28,11 +28,11 @@ public class Disciplina {
     }
 
     public String getDescricao() {
-        return descricao;
+        return descricaoDisciplina;
     }
 
     public void setDescricao(String descricao) {
-        this.descricao = descricao;
+        this.descricaoDisciplina = descricao;
     }
 
     public int getCargaHoraria() {
