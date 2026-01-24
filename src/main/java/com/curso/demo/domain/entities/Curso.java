@@ -21,7 +21,7 @@ public class Curso {
     private Timestamp dataPublicacao;
     private Timestamp dataAtualizacao;
     private String avaliacaoMedia;
-    private String quantidadeAlunos;
+    private int quantidadeAlunos;
     private String requisitosPrevios;
     private boolean certificadoDisponivel;
 
@@ -33,7 +33,7 @@ public class Curso {
             String publicoAlvo,
             String nivel, String cargaHoraria, String idioma, String status,
             String instrutorResponsavel, Timestamp dataCriacao, Timestamp dataPublicacao,
-            Timestamp dataAtualizacao, String avaliacaoMedia, String quantidadeAlunos,
+            Timestamp dataAtualizacao, String avaliacaoMedia, int quantidadeAlunos,
             String requisitosPrevios, boolean certificadoDisponivel) {
         this.nomeCurso = nomeCurso;
         this.idCurso = idCurso;
@@ -180,11 +180,11 @@ public class Curso {
         this.avaliacaoMedia = avaliacaoMedia;
     }
 
-    public String getQuantidadeAlunos() {
+    public int getQuantidadeAlunos() {
         return quantidadeAlunos;
     }
 
-    public void setQuantidadeAlunos(String quantidadeAlunos) {
+    public void setQuantidadeAlunos(int quantidadeAlunos) {
         this.quantidadeAlunos = quantidadeAlunos;
     }
 
