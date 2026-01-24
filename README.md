@@ -25,6 +25,39 @@ Este é um sistema de backend robusto para gestão de cursos online, permitindo 
 
 O projeto segue os princípios da **Clean Architecture** e foca em alta coesão e baixo acoplamento:
 
+-------------------------------------------------------------------------
+| 📚 Arquitetura                                                        |
+|-----------------------------------------------------------------------
+
+```text
+ Este é um sistema de backend robusto para gestão de cursos online,    
+ focado em programação, permitindo o controle de conteúdos,            
+ matrículas e progresso dos alunos.
+```
+
+---------------------------------------------------------------------------                                                                    
+| src/main/java/com/curso/demo/                                           |
+|--------------------------------------------------------------------------
+| ├── `application/`           * Camada de Orquestração                   |
+| │   `├── mapper/`            # Conversão de DTOs para Entidades         |
+| │   `├── services/`          # Serviços de aplicação                    |
+| │   `└── useCases/`          # Regras de fluxo de negócio               |
+| ├── `domain/`                # O Coração do Negócio (DDD)               |
+| │   `├── entities/`          # Classes (User, Course, Enroll)           |
+| │   `├── events/`            # Eventos de domínio                       |
+| │   `├── repositories/`      # Interfaces de acesso a dados             |
+| │   `├── services/`          # Regras de negócio complexas              |
+| │   `└── valueobjects/`      # Objetos de valor (Email, UUID)           |
+| ├── `infraestructure/`       # Implementações Técnicas                  |
+| │   `├── config/`            # Configurações do Spring e Beans          |
+| │   `├── external/`          # Integrações com APIs externas            |
+| │   `└── persistence/`       # Repositórios JPA e Postgres              |
+| └── `interfaces/`            # Entrada e Saída (IO)                     |
+|     `├── controllers/`       # Endpoints da API (REST)                  |
+|     `├── presenters/`        # Formatação de respostas                  |
+|     `└── routes/`            # Definição de rotas                       |
+|                                                                         |
+--------------------------------------------------------------------------
 - **Web/Controller:** Camada de exposição da API REST.
 - **Business/Service:** Contém as regras de negócio e validações.
 - **Persistence/Repository:** Interface de comunicação com o banco de dados via Spring Data JPA.
