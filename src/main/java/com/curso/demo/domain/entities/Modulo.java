@@ -6,20 +6,20 @@ public class Modulo {
     private String descricaoModulo;
     private int ordemModulo;
     private String cursoRelacionado;
-    private int cargaHoraria;
+    private int cargaHorariaModulo;
     private String statusModulo;
 
     public Modulo() {
     }
 
     public Modulo(Long idModulo, String tituloModulo, String descricaoModulo, int ordemModulo,
-            String cursoRelacionado, int cargaHoraria, String statusModulo) {
+            String cursoRelacionado, int cargaHorariaModulo, String statusModulo) {
         this.idModulo = idModulo;
         this.tituloModulo = tituloModulo;
         this.descricaoModulo = descricaoModulo;
         this.ordemModulo = ordemModulo;
         this.cursoRelacionado = cursoRelacionado;
-        this.cargaHoraria = cargaHoraria;
+        this.cargaHorariaModulo = cargaHorariaModulo;
         this.statusModulo = statusModulo;
     }
 
@@ -60,11 +60,11 @@ public class Modulo {
     }
 
     public int getCargaHoraria() {
-        return cargaHoraria;
+        return cargaHorariaModulo;
     }
 
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
+    public void setCargaHoraria(int cargaHorariaModulo) {
+        this.cargaHorariaModulo = cargaHorariaModulo;
     }
 
     public String getStatusModulo() {
