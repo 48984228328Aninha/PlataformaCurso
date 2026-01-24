@@ -1,25 +1,8 @@
 package com.curso.demo.domain.entities;
 
 public class Modulo {
-
-    /*
-     * Id do Módulo
-     * 
-     * Título
-     * 
-     * Descrição
-     * 
-     * Ordem dentro do curso
-     * 
-     * Curso relacionado
-     * 
-     * Carga horária do módulo
-     * 
-     * Status (ativo/inativo)
-     */
-
     private Long idModulo;
-    private String titulo;
+    private String tituloModulo;
     private String descricaoModulo;
     private int ordemModulo;
     private String cursoRelacionado;
@@ -29,10 +12,10 @@ public class Modulo {
     public Modulo() {
     }
 
-    public Modulo(Long idModulo, String titulo, String descricaoModulo, int ordemModulo,
+    public Modulo(Long idModulo, String tituloModulo, String descricaoModulo, int ordemModulo,
             String cursoRelacionado, int cargaHoraria, String statusModulo) {
         this.idModulo = idModulo;
-        this.titulo = titulo;
+        this.tituloModulo = tituloModulo;
         this.descricaoModulo = descricaoModulo;
         this.ordemModulo = ordemModulo;
         this.cursoRelacionado = cursoRelacionado;
@@ -45,26 +28,50 @@ public class Modulo {
     }
 
     public String getTitulo() {
-        return titulo;
+        return tituloModulo;
+    }
+
+    public void setTitulo(String tituloModulo) {
+        this.tituloModulo = tituloModulo;
     }
 
     public String getDescricaoModulo() {
         return descricaoModulo;
     }
 
+    public void setDescricaoModulo(String descricaoModulo) {
+        this.descricaoModulo = descricaoModulo;
+    }
+
     public int getOrdemModulo() {
         return ordemModulo;
+    }
+
+    public void setOrdemModulo(int ordemModulo) {
+        this.ordemModulo = ordemModulo;
     }
 
     public String getCursoRelacionado() {
         return cursoRelacionado;
     }
 
+    public void setCursoRelacionado(String cursoRelacionado) {
+        this.cursoRelacionado = cursoRelacionado;
+    }
+
     public int getCargaHoraria() {
         return cargaHoraria;
     }
 
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
     public String getStatusModulo() {
         return statusModulo;
+    }
+
+    public void setStatusModulo(String statusModulo) {
+        this.statusModulo = statusModulo;
     }
 }
