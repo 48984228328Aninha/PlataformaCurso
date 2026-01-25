@@ -11,18 +11,28 @@ public class UsuarioPersistenceEntity {
     private Long idUsuario;
     private String usuarioNome;
     private String emailUsuario;
+    private String senhaUsuario;
 
     public UsuarioPersistenceEntity() {
     }
 
-    public UsuarioPersistenceEntity(Long idUsuario, String usuarioNome, String emailUsuario) {
+    public UsuarioPersistenceEntity(Long idUsuario, String usuarioNome, String emailUsuario, String senhaUsuario) {
         this.idUsuario = idUsuario;
         this.usuarioNome = usuarioNome;
         this.emailUsuario = emailUsuario;
+        this.senhaUsuario = senhaUsuario;
     }
 
     public Long getIdUsuario() {
         return idUsuario;
+    }
+
+    public String getSenhaUsuario() {
+        return senhaUsuario;
+    }
+
+    public void setSenhaUsuario(String senhaUsuario) {
+        this.senhaUsuario = senhaUsuario;
     }
 
     public String getUsuarioNome() {

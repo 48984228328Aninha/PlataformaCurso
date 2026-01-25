@@ -1,4 +1,4 @@
-package com.curso.demo.application.services;
+package com.curso.demo.application.services.user;
 
 import java.util.UUID;
 

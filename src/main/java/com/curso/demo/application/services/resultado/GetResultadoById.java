@@ -1,4 +1,4 @@
-package com.curso.demo.application.services;
+package com.curso.demo.application.services.resultado;
 
 import com.curso.demo.domain.entities.Resultado;
 import com.curso.demo.domain.repositories.ResultadoDomainRepository;

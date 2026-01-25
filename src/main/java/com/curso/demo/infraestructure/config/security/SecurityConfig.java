@@ -1,4 +1,4 @@
-package com.curso.demo.infraestructure.config;
+package com.curso.demo.infraestructure.config.security;
 
 import org.springframework.security.config.Customizer;
 import org.springframework.context.annotation.Bean;
