@@ -1,5 +1,6 @@
 package com.curso.demo.interfaces.controllers;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ public class AuthController {
     }
 
     @PostMapping("authenticate")
-    public String getMessage() {
-        return "hello from api controller";
+    public String authenticate(Authentication authentication) {
+        return authenticationService.authenticate(authentication);
     }
 }
