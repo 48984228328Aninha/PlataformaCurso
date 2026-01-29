@@ -17,6 +17,7 @@ target/
 key.pem
 public.pem
 *.pem
+application.properties
 
 
 ### IntelliJ IDEA ###
