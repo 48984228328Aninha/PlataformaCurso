@@ -2,6 +2,7 @@ package com.curso.demo.application.services.user;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import com.curso.demo.infraestructure.persistence.entities.UsuarioAutenticadoPersistenceEntity;
 import com.curso.demo.infraestructure.persistence.repositories.JpaUsuarioRepository;
 
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -13,6 +14,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public org.springframework.security.core.userdetails.UserDetails loadUserByUsername(String username) {
-        return null;
+        return jpaUsuarioRepository.findByUsername(username)
+                .map(UsuarioAutenticadoPersistenceEntity::new)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 }

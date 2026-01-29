@@ -1,6 +1,7 @@
 package com.curso.demo.domain.entities;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
+
 import java.util.UUID;
 
 public class Usuario {
