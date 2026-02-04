@@ -3,14 +3,6 @@ package com.curso.demo.interfaces.dto;
 import com.curso.demo.infraestructure.persistence.entities.ResultadoPersistenceEntity;
 
 public class ResultadoInterfaceDto {
-    /*
-     * private Long idResultado;
-     * private String usuario;
-     * private String avaliacao;
-     * private Double notaObtida;
-     * private Timestamp dataSubmissao;
-     * private String feedback;
-     */
 
     private Long idResultado;
     private Double notaObtida;
