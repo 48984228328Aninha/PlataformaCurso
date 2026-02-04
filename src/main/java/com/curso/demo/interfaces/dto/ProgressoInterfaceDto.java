@@ -1,5 +1,7 @@
 package com.curso.demo.interfaces.dto;
 
+import com.curso.demo.infraestructure.persistence.entities.ProgressoPersistenceEntity;
+
 public class ProgressoInterfaceDto {
     private Long idProgresso;
     private String aulasConcluidas;
@@ -9,6 +11,13 @@ public class ProgressoInterfaceDto {
         this.idProgresso = idProgresso;
         this.aulasConcluidas = aulasConcluidas;
         this.ultimaAtividadeRealizada = ultimaAtividadeRealizada;
+    }
+
+    public static ProgressoInterfaceDto toProgressoDto(ProgressoPersistenceEntity progressoPersistenceEntity) {
+        return new ProgressoInterfaceDto(
+                progressoPersistenceEntity.getIdProgresso(),
+                progressoPersistenceEntity.getAulasConcluidas(),
+                progressoPersistenceEntity.getUltimaAtividadeRealizada());
     }
 
     public Long getIdProgresso() {
