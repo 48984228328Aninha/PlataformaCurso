@@ -1,7 +1,17 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import java.util.UUID;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "certificados")
 public class CertificadoPersistenceEntity {
 
+    @Id
+    private UUID idCertificado;
     private String aulasConcluidas;
     private int totalAulasCertificado;
     private int tempoTotalEstudado;
@@ -9,10 +19,16 @@ public class CertificadoPersistenceEntity {
     public CertificadoPersistenceEntity() {
     }
 
-    public CertificadoPersistenceEntity(String aulasConcluidas, int totalAulasCertificado, int tempoTotalEstudado) {
+    public CertificadoPersistenceEntity(UUID idCertificado, String aulasConcluidas, int totalAulasCertificado,
+            int tempoTotalEstudado) {
+        this.idCertificado = idCertificado;
         this.aulasConcluidas = aulasConcluidas;
         this.totalAulasCertificado = totalAulasCertificado;
         this.tempoTotalEstudado = tempoTotalEstudado;
+    }
+
+    public UUID getIdCertificado() {
+        return idCertificado;
     }
 
     public String getAulasConcluidas() {
