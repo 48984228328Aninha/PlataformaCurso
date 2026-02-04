@@ -8,5 +8,5 @@ import com.curso.demo.domain.entities.Usuario;
 public interface UsuarioDomainRepository {
     Optional<Usuario> findById(UUID id);
 
-    void save(Usuario usuario);
+    Usuario save(Usuario usuario);
 }
