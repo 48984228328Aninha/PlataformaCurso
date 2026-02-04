@@ -17,6 +17,15 @@ public class CursoPersistenceEntity {
 
     private String descricao;
 
+    public CursoPersistenceEntity() {
+    }
+
+    public CursoPersistenceEntity(UUID id, String nome, String descricao) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
     public UUID getId() {
         return id;
     }
