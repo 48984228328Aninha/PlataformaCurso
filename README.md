@@ -66,6 +66,22 @@ O projeto segue os princípios da **Clean Architecture** e foca em alta coesão 
 
 ---
 
+## Próximos passos:
+- [ ] Escrever controllers para cada entidade, com get, put, post e delete 
+- [ ] Descrever regras de negócio no service
+- [ ] Colocar comportamento para cada role
+- [x] Fazer o front end em Angular + Tailwind
+- [x] Escrever os domains entities
+- [x] Definir os repositories
+- [x] Definir a lógica do JWT
+- [x] Escrever os DTOS
+- [x] Escrever ValueObjects com validação
+- [ ] Implementar kafka para mensagens
+- [ ] Implementar Prometheus para visualização
+- [ ] Colocar ClickHouse
+- [ ] Colocar Docker
+- [x] Construir o banco de dados em PostgreSQL
+
 ## 🚀 Como Rodar o Projeto
 
 ### 1. Pré-requisitos
