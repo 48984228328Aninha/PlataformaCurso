@@ -1,28 +1,29 @@
 package com.curso.demo.interfaces.controllers.avaliacao;
 
-import java.util.List;
+import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.curso.demo.application.mapper.AvaliacaoMapper;
-import com.curso.demo.infraestructure.persistence.repositories.JpaAvaliacaoRepository;
+import com.curso.demo.application.services.avaliacao.GetAvaliacaoById;
 import com.curso.demo.interfaces.dto.AvaliacaoInterfaceDto;
 
 @RestController
 @RequestMapping("/avaliacoes")
-public class AvaliacaoController {
-    private final JpaAvaliacaoRepository jpaAvaliacaoRepository;
+public class GetAvaliacaoController {
+    @Autowired
+    private final GetAvaliacaoById getAvaliacaoById;
 
-    public AvaliacaoController(JpaAvaliacaoRepository jpaAvaliacaoRepository) {
-        this.jpaAvaliacaoRepository = jpaAvaliacaoRepository;
+    public GetAvaliacaoController(GetAvaliacaoById getAvaliacaoById) {
+        this.getAvaliacaoById = getAvaliacaoById;
     }
 
-    public ResponseEntity<List<AvaliacaoInterfaceDto>> getAvaliacoes() {
-        List<AvaliacaoInterfaceDto> avaliacaoDto = jpaAvaliacaoRepository.findAll().stream()
-                .map(AvaliacaoMapper::toAvaliacaoDto)
-                .toList();
-        return ResponseEntity.ok(avaliacaoDto);
+    public ResponseEntity<AvaliacaoInterfaceDto> getAvaliacao(@PathVariable UUID id) {
+        return getAvaliacaoById.executar(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }

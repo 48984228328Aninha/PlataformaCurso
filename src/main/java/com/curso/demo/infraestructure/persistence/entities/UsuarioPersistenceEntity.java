@@ -1,5 +1,7 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,7 +10,7 @@ import jakarta.persistence.Table;
 @Table(name = "usuarios")
 public class UsuarioPersistenceEntity {
     @Id
-    private Long idUsuario;
+    private UUID idUsuario;
     private String usuarioNome;
     private String emailUsuario;
     private String senhaUsuario;
@@ -16,14 +18,14 @@ public class UsuarioPersistenceEntity {
     public UsuarioPersistenceEntity() {
     }
 
-    public UsuarioPersistenceEntity(Long idUsuario, String usuarioNome, String emailUsuario, String senhaUsuario) {
+    public UsuarioPersistenceEntity(UUID idUsuario, String usuarioNome, String emailUsuario, String senhaUsuario) {
         this.idUsuario = idUsuario;
         this.usuarioNome = usuarioNome;
         this.emailUsuario = emailUsuario;
         this.senhaUsuario = senhaUsuario;
     }
 
-    public Long getIdUsuario() {
+    public UUID getIdUsuario() {
         return idUsuario;
     }
 

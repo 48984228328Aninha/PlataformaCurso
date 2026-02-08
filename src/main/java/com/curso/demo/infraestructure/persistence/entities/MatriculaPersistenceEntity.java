@@ -1,5 +1,7 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,7 +10,7 @@ import jakarta.persistence.Table;
 @Table(name = "matricula")
 public class MatriculaPersistenceEntity {
     @Id
-    private Long idMatricula;
+    private UUID idMatricula;
     private String curso;
     private String dataMatricula;
     private String usuario;
@@ -16,14 +18,14 @@ public class MatriculaPersistenceEntity {
     public MatriculaPersistenceEntity() {
     }
 
-    public MatriculaPersistenceEntity(Long idMatricula, String curso, String dataMatricula, String usuario) {
+    public MatriculaPersistenceEntity(UUID idMatricula, String curso, String dataMatricula, String usuario) {
         this.idMatricula = idMatricula;
         this.curso = curso;
         this.dataMatricula = dataMatricula;
         this.usuario = usuario;
     }
 
-    public Long getIdMatricula() {
+    public UUID getIdMatricula() {
         return idMatricula;
     }
 
@@ -36,6 +38,10 @@ public class MatriculaPersistenceEntity {
     }
 
     public String getMatricula() {
+        return dataMatricula;
+    }
+
+    public String getDataMatricula() {
         return dataMatricula;
     }
 

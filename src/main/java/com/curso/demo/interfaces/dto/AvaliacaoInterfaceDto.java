@@ -1,13 +1,15 @@
 package com.curso.demo.interfaces.dto;
 
+import java.util.UUID;
+
 import com.curso.demo.infraestructure.persistence.entities.AvaliacaoPersistenceEntity;
 
 public class AvaliacaoInterfaceDto {
-    private Long idAvaliacao;
+    private UUID idAvaliacao;
     private String tituloAvaliacao;
     private String tipo;
 
-    public AvaliacaoInterfaceDto(Long idAvaliacao, String tituloAvaliacao, String tipo) {
+    public AvaliacaoInterfaceDto(UUID idAvaliacao, String tituloAvaliacao, String tipo) {
         this.idAvaliacao = idAvaliacao;
         this.tituloAvaliacao = tituloAvaliacao;
         this.tipo = tipo;
@@ -16,7 +18,7 @@ public class AvaliacaoInterfaceDto {
     public AvaliacaoInterfaceDto() {
     }
 
-    public AvaliacaoInterfaceDto(Long idAvaliacao, String titulo, boolean statusAvaliacao) {
+    public AvaliacaoInterfaceDto(UUID idAvaliacao, String titulo, boolean statusAvaliacao) {
         this.idAvaliacao = idAvaliacao;
         this.tituloAvaliacao = titulo;
         this.tipo = statusAvaliacao ? "Ativa" : "Inativa";
@@ -30,7 +32,7 @@ public class AvaliacaoInterfaceDto {
 
     }
 
-    public Long getIdAvaliacao() {
+    public UUID getIdAvaliacao() {
         return idAvaliacao;
     }
 

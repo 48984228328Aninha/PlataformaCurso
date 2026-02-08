@@ -1,10 +1,11 @@
 package com.curso.demo.domain.entities;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 public class Matricula {
 
-    private Long idMatricula;
+    private UUID idMatricula;
     private String usuario;
     private String curso;
     private String statusMatricula;
@@ -17,7 +18,7 @@ public class Matricula {
     public Matricula() {
     }
 
-    public Matricula(Long idMatricula, String usuario, String curso, String statusMatricula,
+    public Matricula(UUID idMatricula, String usuario, String curso, String statusMatricula,
             String dataMatricula, Timestamp dataInicio, Timestamp dataConclusao,
             String progressoGeral, String ultimaAulaAcessada) {
         this.idMatricula = idMatricula;
@@ -31,7 +32,7 @@ public class Matricula {
         this.ultimaAulaAcessada = ultimaAulaAcessada;
     }
 
-    public Long getIdMatricula() {
+    public UUID getIdMatricula() {
         return idMatricula;
     }
 
