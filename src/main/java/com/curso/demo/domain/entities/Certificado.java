@@ -1,8 +1,10 @@
 package com.curso.demo.domain.entities;
 
+import java.util.UUID;
+
 public class Certificado {
 
-    private Long idCertificado;
+    private UUID idCertificado;
     private int percentualConcluido;
     private String aulasConcluidas;
     private int totalAulasCertificado;
@@ -11,7 +13,7 @@ public class Certificado {
     public Certificado() {
     }
 
-    public Certificado(Long idCertificado, int percentualConcluido, String aulasConcluidas, int totalAulasCertificado,
+    public Certificado(UUID idCertificado, int percentualConcluido, String aulasConcluidas, int totalAulasCertificado,
             int tempoTotalEstudado) {
         this.idCertificado = idCertificado;
         this.percentualConcluido = percentualConcluido;
@@ -20,7 +22,13 @@ public class Certificado {
         this.tempoTotalEstudado = tempoTotalEstudado;
     }
 
-    public Long getIdCertificado() {
+    public Certificado(UUID idCertificado, int percentualConcluido, String aulasConcluidas) {
+        this.idCertificado = idCertificado;
+        this.percentualConcluido = percentualConcluido;
+        this.aulasConcluidas = aulasConcluidas;
+    }
+
+    public UUID getIdCertificado() {
         return idCertificado;
     }
 
