@@ -1,9 +1,12 @@
 package com.curso.demo.application.services.avaliacao;
 
+import java.util.Optional;
+import java.util.UUID;
+
 import com.curso.demo.application.mapper.AvaliacaoMapper;
-import com.curso.demo.domain.entities.Avaliacao;
 import com.curso.demo.domain.repositories.AvaliacaoDomainRepository;
 import com.curso.demo.domain.repositories.UsuarioDomainRepository;
+import com.curso.demo.interfaces.dto.AvaliacaoInterfaceDto;
 
 public class GetAvaliacaoById {
     private final AvaliacaoDomainRepository avaliacaoDomainRepository;
@@ -16,9 +19,9 @@ public class GetAvaliacaoById {
         return usuarioDomainRepository();
     }
 
-    public Avaliacao executar(Long avaliacaoId) {
+    public Optional<AvaliacaoInterfaceDto> executar(UUID avaliacaoId) {
         return avaliacaoDomainRepository.findById(avaliacaoId)
-                .map(AvaliacaoMapper::toDomain);
-
+                .map(AvaliacaoMapper::toAvaliacaoDto);
     }
+
 }

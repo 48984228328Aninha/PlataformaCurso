@@ -28,6 +28,23 @@ public class Curso {
     public Curso() {
     }
 
+    public Curso(String nomeCurso, UUID idCurso, String categoriaCurso, String descricaoCurso,
+            String objetivoCurso, String tituloCurso, String publicoAlvo, String nivel,
+            String cargaHoraria, String idioma, String status, String instrutorResponsavel) {
+        this.nomeCurso = nomeCurso;
+        this.idCurso = idCurso;
+        this.categoriaCurso = categoriaCurso;
+        this.descricaoCurso = descricaoCurso;
+        this.objetivoCurso = objetivoCurso;
+        this.tituloCurso = tituloCurso;
+        this.publicoAlvo = publicoAlvo;
+        this.nivel = nivel;
+        this.cargaHoraria = cargaHoraria;
+        this.idioma = idioma;
+        this.status = status;
+        this.instrutorResponsavel = instrutorResponsavel;
+    }
+
     public Curso(String nomeCurso, UUID idCurso, String categoriaCurso, String descricaoCurso, String objetivoCurso,
             String tituloCurso,
             String publicoAlvo,

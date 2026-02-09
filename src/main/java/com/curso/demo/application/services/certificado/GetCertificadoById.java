@@ -1,8 +1,12 @@
 package com.curso.demo.application.services.certificado;
 
-import com.curso.demo.domain.entities.Certificado;
-import com.curso.demo.domain.repositories.CertificadoDomainRepository;
+import org.springframework.stereotype.Service;
 
+import com.curso.demo.application.mapper.CertificadoMapper;
+import com.curso.demo.domain.repositories.CertificadoDomainRepository;
+import com.curso.demo.interfaces.dto.CertificadoInterfaceDto;
+
+@Service
 public class GetCertificadoById {
     private final CertificadoDomainRepository certificadoDomainRepository;
 
@@ -14,8 +18,9 @@ public class GetCertificadoById {
         return certificadoDomainRepository;
     }
 
-    public Certificado executar(Long certificadoId) {
+    public CertificadoInterfaceDto executar(Long certificadoId) {
         return certificadoDomainRepository.findById(certificadoId)
+                .map(CertificadoMapper::toCertificadoDto)
                 .orElseThrow(() -> new RuntimeException("Não possui certificado"));
     }
 }

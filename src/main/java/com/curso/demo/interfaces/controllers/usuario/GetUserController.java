@@ -22,8 +22,7 @@ public class GetUserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioInterfaceDto> getUser(@PathVariable UUID id) {
-        return getUserById.executar(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        UsuarioInterfaceDto usuario = getUserById.executar(id);
+        return ResponseEntity.ok(usuario);
     }
 }
