@@ -32,6 +32,13 @@ public class Matricula {
         this.ultimaAulaAcessada = ultimaAulaAcessada;
     }
 
+    public Matricula(UUID idMatricula, String curso, String dataMatricula, String usuario) {
+        this.idMatricula = idMatricula;
+        this.curso = curso;
+        this.dataMatricula = dataMatricula;
+        this.usuario = usuario;
+    }
+
     public UUID getIdMatricula() {
         return idMatricula;
     }

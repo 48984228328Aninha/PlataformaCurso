@@ -32,4 +32,20 @@ public class MatriculaMapper {
                 matriculaPersistence.getCurso(),
                 matriculaPersistence.getUsuario());
     }
+
+    public static Matricula toDomain(MatriculaPersistenceEntity matriculaPersistenceEntity) {
+        return new Matricula(
+                matriculaPersistenceEntity.getIdMatricula(),
+                matriculaPersistenceEntity.getCurso(),
+                matriculaPersistenceEntity.getDataMatricula(),
+                matriculaPersistenceEntity.getUsuario());
+    }
+
+    public static MatriculaPersistenceEntity toEntity(Matricula matricula) {
+        return new MatriculaPersistenceEntity(
+                matricula.getIdMatricula(),
+                matricula.getCurso(),
+                matricula.getDataMatricula(),
+                matricula.getUsuario());
+    }
 }

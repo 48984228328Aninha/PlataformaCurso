@@ -28,6 +28,13 @@ public class Certificado {
         this.aulasConcluidas = aulasConcluidas;
     }
 
+    public Certificado(UUID idCertificado, String aulasConcluidas, int totalAulasCertificado, int tempoTotalEstudado) {
+        this.idCertificado = idCertificado;
+        this.aulasConcluidas = aulasConcluidas;
+        this.totalAulasCertificado = totalAulasCertificado;
+        this.tempoTotalEstudado = tempoTotalEstudado;
+    }
+
     public UUID getIdCertificado() {
         return idCertificado;
     }

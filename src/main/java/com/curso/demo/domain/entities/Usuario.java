@@ -42,6 +42,13 @@ public class Usuario {
         this.progresso = progresso;
     }
 
+    public Usuario(UUID idUsuario, String username, String email, String password) {
+        this.idUsuario = idUsuario;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
     public UUID getIdUsuario() {
         return idUsuario;
     }

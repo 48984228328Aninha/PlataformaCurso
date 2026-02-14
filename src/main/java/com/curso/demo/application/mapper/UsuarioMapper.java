@@ -42,4 +42,20 @@ public class UsuarioMapper {
                 dto.getEmailUsuario());
 
     }
+
+    public static Usuario toDomain(UsuarioPersistenceEntity usuarioPersistenceEntity) {
+        return new Usuario(
+                usuarioPersistenceEntity.getIdUsuario(),
+                usuarioPersistenceEntity.getUsuarioNome(),
+                usuarioPersistenceEntity.getEmailUsuario(),
+                usuarioPersistenceEntity.getSenhaUsuario());
+    }
+
+    public static UsuarioPersistenceEntity toEntity(Usuario usuario) {
+        return new UsuarioPersistenceEntity(
+                usuario.getIdUsuario(),
+                usuario.getUsername(),
+                usuario.getEmail(),
+                usuario.getPassword());
+    }
 }

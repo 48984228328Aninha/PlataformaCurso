@@ -8,5 +8,5 @@ import com.curso.demo.domain.entities.Matricula;
 public interface MatriculaDomainRepository {
     Optional<Matricula> findById(UUID id);
 
-    void save(Matricula matricula);
+    Matricula save(Matricula matricula);
 }

@@ -25,4 +25,19 @@ public class CertificadoMapper {
                 certificadoPersistence.getAulasConcluidas(),
                 0);
     }
+
+    public static Certificado toDomain(CertificadoPersistenceEntity certificadoPersistenceEntity) {
+        return new Certificado(
+                certificadoPersistenceEntity.getIdCertificado(),
+                certificadoPersistenceEntity.getTempoTotalEstudado(),
+                certificadoPersistenceEntity.getAulasConcluidas());
+    }
+
+    public static CertificadoPersistenceEntity toEntity(Certificado certificado) {
+        return new CertificadoPersistenceEntity(
+                certificado.getIdCertificado(),
+                certificado.getAulasConcluidas(),
+                certificado.getTotalAulasCertificado(),
+                certificado.getTempoTotalEstudado());
+    }
 }

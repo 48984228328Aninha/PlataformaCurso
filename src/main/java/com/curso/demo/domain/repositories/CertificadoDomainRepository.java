@@ -8,5 +8,5 @@ import com.curso.demo.domain.entities.Certificado;
 public interface CertificadoDomainRepository {
     Optional<Certificado> findById(UUID id);
 
-    void save(Certificado certificado);
+    Certificado save(Certificado certificado);
 }
