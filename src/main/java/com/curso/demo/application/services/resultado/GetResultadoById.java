@@ -1,5 +1,7 @@
 package com.curso.demo.application.services.resultado;
 
+import java.util.UUID;
+
 import com.curso.demo.domain.entities.Resultado;
 import com.curso.demo.domain.repositories.ResultadoDomainRepository;
 
@@ -14,7 +16,7 @@ public class GetResultadoById {
         return resultadoDomainRepository;
     }
 
-    public Resultado executar(Long idResultado) {
+    public Resultado executar(UUID idResultado) {
         return resultadoDomainRepository.findById(idResultado)
                 .orElseThrow(() -> new RuntimeException("Ainda não há resultado"));
     }

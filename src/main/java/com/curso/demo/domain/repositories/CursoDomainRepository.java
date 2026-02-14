@@ -1,11 +1,12 @@
 package com.curso.demo.domain.repositories;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import com.curso.demo.domain.entities.Curso;
 
 public interface CursoDomainRepository {
-    Optional<Curso> findById(Long id);
+    Optional<Curso> findById(UUID idCurso);
 
-    void save(Curso curso);
+    Curso save(Curso curso);
 }

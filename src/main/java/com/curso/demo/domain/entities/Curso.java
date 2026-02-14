@@ -73,6 +73,12 @@ public class Curso {
         this.certificadoDisponivel = certificadoDisponivel;
     }
 
+    public Curso(UUID idCurso, String nomeCurso, String descricaoCurso) {
+        this.idCurso = idCurso;
+        this.nomeCurso = nomeCurso;
+        this.descricaoCurso = descricaoCurso;
+    }
+
     public String getNome() {
         return nomeCurso;
     }

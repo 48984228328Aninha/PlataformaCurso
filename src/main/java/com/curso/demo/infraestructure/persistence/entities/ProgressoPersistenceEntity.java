@@ -1,5 +1,7 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,20 +10,20 @@ import jakarta.persistence.Table;
 @Table(name = "progresso")
 public class ProgressoPersistenceEntity {
     @Id
-    private Long idProgresso;
+    private UUID idProgresso;
     private String aulasConcluidas;
     private String ultimaAtividadeRealizada;
 
     public ProgressoPersistenceEntity() {
     }
 
-    public ProgressoPersistenceEntity(Long idProgresso, String aulasConcluidas, String ultimaAtividadeRealizada) {
+    public ProgressoPersistenceEntity(UUID idProgresso, String aulasConcluidas, String ultimaAtividadeRealizada) {
         this.idProgresso = idProgresso;
         this.aulasConcluidas = aulasConcluidas;
         this.ultimaAtividadeRealizada = ultimaAtividadeRealizada;
     }
 
-    public Long getIdProgresso() {
+    public UUID getIdProgresso() {
         return idProgresso;
     }
 

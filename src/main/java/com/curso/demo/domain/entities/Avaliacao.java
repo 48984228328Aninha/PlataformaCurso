@@ -1,8 +1,10 @@
 package com.curso.demo.domain.entities;
 
+import java.util.UUID;
+
 public class Avaliacao {
 
-    private Long idAvaliacao;
+    private UUID idAvaliacao;
     private String tituloAvaliacao;
     private String tipo;
     private String disciplinaRelacionada;
@@ -15,7 +17,7 @@ public class Avaliacao {
     public Avaliacao() {
     }
 
-    public Avaliacao(Long idAvaliacao, String tituloAvaliacao, String tipo, String disciplinaRelacionada,
+    public Avaliacao(UUID idAvaliacao, String tituloAvaliacao, String tipo, String disciplinaRelacionada,
             double notaMaxima, double notaMinimaAprovacao, int quantidadeTentativas,
             int tempoLimite, boolean statusAvaliacao) {
         this.idAvaliacao = idAvaliacao;
@@ -29,7 +31,13 @@ public class Avaliacao {
         this.statusAvaliacao = statusAvaliacao;
     }
 
-    public Long getIdAvaliacao() {
+    public Avaliacao(UUID idAvaliacao, boolean statusAvaliacao, String tituloAvaliacao) {
+        this.idAvaliacao = idAvaliacao;
+        this.statusAvaliacao = statusAvaliacao;
+        this.tituloAvaliacao = tituloAvaliacao;
+    }
+
+    public UUID getIdAvaliacao() {
         return idAvaliacao;
     }
 

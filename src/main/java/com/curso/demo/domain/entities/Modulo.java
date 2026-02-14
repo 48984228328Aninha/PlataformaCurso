@@ -1,7 +1,9 @@
 package com.curso.demo.domain.entities;
 
+import java.util.UUID;
+
 public class Modulo {
-    private Long idModulo;
+    private UUID idModulo;
     private String tituloModulo;
     private String descricaoModulo;
     private int ordemModulo;
@@ -12,7 +14,16 @@ public class Modulo {
     public Modulo() {
     }
 
-    public Modulo(Long idModulo, String tituloModulo, String descricaoModulo, int ordemModulo,
+    public Modulo(UUID idModulo, String tituloModulo, String descricaoModulo, int cargaHorariaModulo,
+            String statusModulo) {
+        this.idModulo = idModulo;
+        this.tituloModulo = tituloModulo;
+        this.descricaoModulo = descricaoModulo;
+        this.cargaHorariaModulo = cargaHorariaModulo;
+        this.statusModulo = statusModulo;
+    }
+
+    public Modulo(UUID idModulo, String tituloModulo, String descricaoModulo, int ordemModulo,
             String cursoRelacionado, int cargaHorariaModulo, String statusModulo) {
         this.idModulo = idModulo;
         this.tituloModulo = tituloModulo;
@@ -23,7 +34,7 @@ public class Modulo {
         this.statusModulo = statusModulo;
     }
 
-    public Long getIdModulo() {
+    public UUID getIdModulo() {
         return idModulo;
     }
 

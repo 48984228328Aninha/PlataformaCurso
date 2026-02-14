@@ -1,14 +1,16 @@
 package com.curso.demo.interfaces.dto;
 
+import java.util.UUID;
+
 import com.curso.demo.infraestructure.persistence.entities.ResultadoPersistenceEntity;
 
 public class ResultadoInterfaceDto {
 
-    private Long idResultado;
+    private UUID idResultado;
     private Double notaObtida;
     private String usuario;
 
-    public ResultadoInterfaceDto(Long idResultado, Double notaObtida, String usuario) {
+    public ResultadoInterfaceDto(UUID idResultado, Double notaObtida, String usuario) {
         this.idResultado = idResultado;
         this.notaObtida = notaObtida;
         this.usuario = usuario;
@@ -22,7 +24,7 @@ public class ResultadoInterfaceDto {
 
     }
 
-    public Long getIdResultado() {
+    public UUID getIdResultado() {
         return idResultado;
     }
 

@@ -1,9 +1,10 @@
 package com.curso.demo.domain.entities;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 public class Resultado {
-    private Long idResultado;
+    private UUID idResultado;
     private String usuario;
     private String avaliacao;
     private Double notaObtida;
@@ -15,7 +16,7 @@ public class Resultado {
     public Resultado() {
     }
 
-    public Resultado(Long idResultado, String usuario, String avaliacao, Double notaObtida,
+    public Resultado(UUID idResultado, String usuario, String avaliacao, Double notaObtida,
             String status, Timestamp dataSubmissao, int tentativa, String feedback) {
         this.idResultado = idResultado;
         this.usuario = usuario;
@@ -27,7 +28,13 @@ public class Resultado {
         this.feedback = feedback;
     }
 
-    public Long getIdResultado() {
+    public Resultado(UUID idResultado, Double notaObtida, String usuario) {
+        this.idResultado = idResultado;
+        this.notaObtida = notaObtida;
+        this.usuario = usuario;
+    }
+
+    public UUID getIdResultado() {
         return idResultado;
     }
 

@@ -1,5 +1,7 @@
 package com.curso.demo.application.services.disciplina;
 
+import java.util.UUID;
+
 import com.curso.demo.domain.entities.Disciplina;
 import com.curso.demo.domain.repositories.DisciplinaDomainRepository;
 
@@ -14,7 +16,7 @@ public class GetDisciplinaById {
         return disciplinaDomainRepository;
     }
 
-    public Disciplina executar(Long disciplinaId) {
+    public Disciplina executar(UUID disciplinaId) {
         return disciplinaDomainRepository.findById(disciplinaId)
                 .orElseThrow(() -> new RuntimeException("Disciplina não encontrada"));
     }

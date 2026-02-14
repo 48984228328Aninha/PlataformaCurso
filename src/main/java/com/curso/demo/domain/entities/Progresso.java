@@ -1,8 +1,10 @@
 package com.curso.demo.domain.entities;
 
+import java.util.UUID;
+
 public class Progresso {
 
-    private Long idProgresso;
+    private UUID idProgresso;
     private String aulasConcluidas;
     private int totalAulas;
     private int tempoTotalEstudado;
@@ -11,7 +13,7 @@ public class Progresso {
     public Progresso() {
     }
 
-    public Progresso(Long idProgresso, String aulasConcluidas, int totalAulas, int tempoTotalEstudado,
+    public Progresso(UUID idProgresso, String aulasConcluidas, int totalAulas, int tempoTotalEstudado,
             String ultimaAtividadeRealizada) {
         this.idProgresso = idProgresso;
         this.aulasConcluidas = aulasConcluidas;
@@ -20,7 +22,13 @@ public class Progresso {
         this.ultimaAtividadeRealizada = ultimaAtividadeRealizada;
     }
 
-    public Long getIdProgresso() {
+    public Progresso(UUID idProgresso, String aulasConcluidas, String ultimaAtividadeRealizada) {
+        this.idProgresso = idProgresso;
+        this.aulasConcluidas = aulasConcluidas;
+        this.ultimaAtividadeRealizada = ultimaAtividadeRealizada;
+    }
+
+    public UUID getIdProgresso() {
         return idProgresso;
     }
 

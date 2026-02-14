@@ -1,5 +1,7 @@
 package com.curso.demo.interfaces.controllers.progresso;
 
+import java.util.UUID;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +23,7 @@ public class GetProgressoController {
     }
 
     @GetMapping("/{idProgresso}")
-    public ResponseEntity<ProgressoInterfaceDto> getProgressoById(@PathVariable Long idProgresso) {
+    public ResponseEntity<ProgressoInterfaceDto> getProgressoById(@PathVariable UUID idProgresso) {
         Progresso progresso = getProgressoById.executar(idProgresso);
         ProgressoInterfaceDto progressoDto = ProgressoMapper.toProgressoDto(progresso);
         return ResponseEntity.ok(progressoDto);

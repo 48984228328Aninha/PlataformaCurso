@@ -1,13 +1,15 @@
 package com.curso.demo.interfaces.dto;
 
+import java.util.UUID;
+
 import com.curso.demo.infraestructure.persistence.entities.DisciplinaPersistenceEntity;
 
 public class DisciplinaInterfaceDto {
-    private Long idDisciplina;
+    private UUID idDisciplina;
     private String nomeDisciplina;
     private String descricaoDisciplina;
 
-    public DisciplinaInterfaceDto(Long idDisciplina, String nomeDisciplina, String descricaoDisciplina) {
+    public DisciplinaInterfaceDto(UUID idDisciplina, String nomeDisciplina, String descricaoDisciplina) {
         this.idDisciplina = idDisciplina;
         this.nomeDisciplina = nomeDisciplina;
         this.descricaoDisciplina = descricaoDisciplina;
@@ -20,7 +22,7 @@ public class DisciplinaInterfaceDto {
                 disciplinaPersistence.getDescricaoDisciplina());
     }
 
-    public Long getIdDisciplina() {
+    public UUID getIdDisciplina() {
         return idDisciplina;
     }
 

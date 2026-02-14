@@ -1,11 +1,12 @@
 package com.curso.demo.domain.repositories;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import com.curso.demo.domain.entities.Disciplina;
 
 public interface DisciplinaDomainRepository {
-    Optional<Disciplina> findById(Long id);
+    Optional<Disciplina> findById(UUID id);
 
-    void save(Disciplina disciplina);
+    Disciplina save(Disciplina disciplina);
 }

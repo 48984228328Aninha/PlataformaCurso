@@ -1,5 +1,7 @@
 package com.curso.demo.interfaces.controllers.resultado;
 
+import java.util.UUID;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +23,7 @@ public class GetResultadoController {
     }
 
     @GetMapping("/{idResultado}")
-    public ResponseEntity<ResultadoInterfaceDto> getResultadoById(@PathVariable Long idResultado) {
+    public ResponseEntity<ResultadoInterfaceDto> getResultadoById(@PathVariable UUID idResultado) {
         Resultado resultado = getResultadoById.executar(idResultado);
         ResultadoInterfaceDto resultadoDto = ResultadoMapper.toResultadoDto(resultado);
         return ResponseEntity.ok(resultadoDto);

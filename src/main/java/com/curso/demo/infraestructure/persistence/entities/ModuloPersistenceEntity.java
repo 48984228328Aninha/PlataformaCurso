@@ -1,15 +1,19 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.UuidGenerator;
 
 @Entity
 @Table(name = "modulo")
 public class ModuloPersistenceEntity {
 
     @Id
-    private Long idModulo;
+    @UuidGenerator
+    private UUID idModulo;
     private String tituloModulo;
     private String descricaoModulo;
     private int cargaHorariaModulo;
@@ -18,7 +22,7 @@ public class ModuloPersistenceEntity {
     public ModuloPersistenceEntity() {
     }
 
-    public ModuloPersistenceEntity(Long idModulo, String tituloModulo, String descricaoModulo, int cargaHorariaModulo,
+    public ModuloPersistenceEntity(UUID idModulo, String tituloModulo, String descricaoModulo, int cargaHorariaModulo,
             String statusModulo) {
         this.idModulo = idModulo;
         this.tituloModulo = tituloModulo;
@@ -27,7 +31,7 @@ public class ModuloPersistenceEntity {
         this.statusModulo = statusModulo;
     }
 
-    public Long getIdModulo() {
+    public UUID getIdModulo() {
         return idModulo;
     }
 

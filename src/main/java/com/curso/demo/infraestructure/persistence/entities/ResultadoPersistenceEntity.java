@@ -1,6 +1,7 @@
 package com.curso.demo.infraestructure.persistence.entities;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,7 +12,7 @@ import jakarta.persistence.Table;
 public class ResultadoPersistenceEntity {
 
     @Id
-    private Long idResultado;
+    private UUID idResultado;
     private String usuario;
     private String avaliacao;
     private Double notaObtida;
@@ -21,7 +22,7 @@ public class ResultadoPersistenceEntity {
     public ResultadoPersistenceEntity() {
     }
 
-    public ResultadoPersistenceEntity(Long idResultado, String usuario, String avaliacao, Double notaObtida,
+    public ResultadoPersistenceEntity(UUID idResultado, String usuario, String avaliacao, Double notaObtida,
             Timestamp dataSubmissao, String feedback) {
         this.idResultado = idResultado;
         this.usuario = usuario;
@@ -31,7 +32,7 @@ public class ResultadoPersistenceEntity {
         this.feedback = feedback;
     }
 
-    public Long getIdResultado() {
+    public UUID getIdResultado() {
         return idResultado;
     }
 

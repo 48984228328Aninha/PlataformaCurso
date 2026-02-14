@@ -1,5 +1,7 @@
 package com.curso.demo.application.services.certificado;
 
+import java.util.UUID;
+
 import org.springframework.stereotype.Service;
 
 import com.curso.demo.application.mapper.CertificadoMapper;
@@ -18,7 +20,7 @@ public class GetCertificadoById {
         return certificadoDomainRepository;
     }
 
-    public CertificadoInterfaceDto executar(Long certificadoId) {
+    public CertificadoInterfaceDto executar(UUID certificadoId) {
         return certificadoDomainRepository.findById(certificadoId)
                 .map(CertificadoMapper::toCertificadoDto)
                 .orElseThrow(() -> new RuntimeException("Não possui certificado"));

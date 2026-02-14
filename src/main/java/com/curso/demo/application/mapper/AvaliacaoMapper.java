@@ -34,4 +34,25 @@ public class AvaliacaoMapper {
                 avaliacaoPersistence.getTitulo(),
                 avaliacaoPersistence.getStatusAvaliacao() ? "Ativa" : "Inativa");
     }
+
+    public static AvaliacaoPersistenceEntity toEntity(Avaliacao avaliacao) {
+        return new AvaliacaoPersistenceEntity(
+                avaliacao.getIdAvaliacao(),
+                avaliacao.getTitulo(),
+                avaliacao.getStatusAvaliacao());
+    }
+
+    public static Avaliacao toDomain(AvaliacaoPersistenceEntity avaliacaoPersistenceEntity) {
+        return new Avaliacao(
+                avaliacaoPersistenceEntity.getIdAvaliacao(),
+                avaliacaoPersistenceEntity.getTitulo(),
+                "Desconhecido",
+                "Matemática",
+                100.0,
+                60.0,
+                3,
+                60,
+                avaliacaoPersistenceEntity.getStatusAvaliacao());
+    }
+
 }

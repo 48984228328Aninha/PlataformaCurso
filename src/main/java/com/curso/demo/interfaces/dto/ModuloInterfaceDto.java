@@ -1,13 +1,15 @@
 package com.curso.demo.interfaces.dto;
 
+import java.util.UUID;
+
 import com.curso.demo.infraestructure.persistence.entities.ModuloPersistenceEntity;
 
 public class ModuloInterfaceDto {
-    private Long idModulo;
+    private UUID idModulo;
     private String tituloModulo;
     private String descricaoModulo;
 
-    public ModuloInterfaceDto(Long idModulo, String tituloModulo, String descricaoModulo) {
+    public ModuloInterfaceDto(UUID idModulo, String tituloModulo, String descricaoModulo) {
         this.idModulo = idModulo;
         this.tituloModulo = tituloModulo;
         this.descricaoModulo = descricaoModulo;
@@ -20,7 +22,7 @@ public class ModuloInterfaceDto {
                 moduloPersistenceEntity.getDescricaoModulo());
     }
 
-    public Long getIdModulo() {
+    public UUID getIdModulo() {
         return idModulo;
     }
 

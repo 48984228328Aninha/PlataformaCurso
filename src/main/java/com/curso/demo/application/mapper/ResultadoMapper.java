@@ -30,4 +30,21 @@ public class ResultadoMapper {
                 resultadoPersistenceEntity.getNotaObtida(),
                 resultadoPersistenceEntity.getUsuario());
     }
+
+    public static Resultado toDomain(ResultadoPersistenceEntity resultadoPersistenceEntity) {
+        return new Resultado(
+                resultadoPersistenceEntity.getIdResultado(),
+                resultadoPersistenceEntity.getNotaObtida(),
+                resultadoPersistenceEntity.getUsuario());
+    }
+
+    public static ResultadoPersistenceEntity toEntity(Resultado resultado) {
+        return new ResultadoPersistenceEntity(
+                resultado.getIdResultado(),
+                resultado.getUsuario(),
+                resultado.getAvaliacao(),
+                resultado.getNotaObtida(),
+                resultado.getDataSubmissao(),
+                resultado.getFeedback());
+    }
 }

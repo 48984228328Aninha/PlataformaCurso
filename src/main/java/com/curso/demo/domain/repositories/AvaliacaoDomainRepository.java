@@ -8,5 +8,5 @@ import com.curso.demo.domain.entities.Avaliacao;
 public interface AvaliacaoDomainRepository {
     Optional<Avaliacao> findById(UUID id);
 
-    void save(Avaliacao avaliacao);
+    Avaliacao save(Avaliacao avaliacao);
 }
