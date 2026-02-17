@@ -91,6 +91,10 @@ public class Curso {
         return idCurso;
     }
 
+    public void setId(UUID idCurso) {
+        this.idCurso = idCurso;
+    }
+
     public String getCategoria() {
         return categoriaCurso;
     }

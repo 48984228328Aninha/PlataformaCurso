@@ -55,4 +55,20 @@ public class Certificado {
         return tempoTotalEstudado;
     }
 
+    public void setPercentualCOncluido(int percentualConcluido) {
+        this.percentualConcluido = percentualConcluido;
+    }
+
+    public void setAulasConcluidas(String aulasConcluidas) {
+        this.aulasConcluidas = aulasConcluidas;
+    }
+
+    public void setTotalAulasCertificado(int totalAulasCertificado) {
+        this.totalAulasCertificado = totalAulasCertificado;
+    }
+
+    public void setTempoTotalEstudado(int tempoTotalEstudado) {
+        this.tempoTotalEstudado = tempoTotalEstudado;
+    }
+
 }

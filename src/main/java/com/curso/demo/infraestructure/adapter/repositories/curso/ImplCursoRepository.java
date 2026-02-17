@@ -1,4 +1,4 @@
-package com.curso.demo.infraestructure.adapter.curso;
+package com.curso.demo.infraestructure.adapter.repositories.curso;
 
 import java.util.Optional;
 import java.util.UUID;

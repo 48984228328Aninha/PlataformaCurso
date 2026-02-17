@@ -1,4 +1,4 @@
-package com.curso.demo.interfaces.controllers.user;
+package com.curso.demo.interfaces.controllers.usuario;
 
 public class DeleteUserController {
 

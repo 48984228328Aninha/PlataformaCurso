@@ -2,7 +2,6 @@ package com.curso.demo.interfaces.dto;
 
 import java.util.UUID;
 
-import com.curso.demo.infraestructure.persistence.entities.MatriculaPersistenceEntity;
 
 public class MatriculaInterfaceDto {
     private UUID idMatricula;
@@ -18,12 +17,6 @@ public class MatriculaInterfaceDto {
     public MatriculaInterfaceDto() {
     }
 
-    public static MatriculaInterfaceDto toMatriculaDto(MatriculaPersistenceEntity matriculaPersistence) {
-        return new MatriculaInterfaceDto(
-                matriculaPersistence.getIdMatricula(),
-                matriculaPersistence.getCurso(),
-                matriculaPersistence.getUsuario());
-    }
 
     public UUID getIdMatricula() {
         return idMatricula;

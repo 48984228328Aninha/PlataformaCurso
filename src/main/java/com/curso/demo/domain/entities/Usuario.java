@@ -49,6 +49,12 @@ public class Usuario {
         this.password = password;
     }
 
+    public Usuario(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
     public UUID getIdUsuario() {
         return idUsuario;
     }

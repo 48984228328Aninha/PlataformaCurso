@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ public class GetAvaliacaoController {
         this.getAvaliacaoById = getAvaliacaoById;
     }
 
+    @GetMapping("/{idAvaliacao}")
     public ResponseEntity<AvaliacaoInterfaceDto> getAvaliacao(@PathVariable UUID id) {
         return getAvaliacaoById.executar(id)
                 .map(ResponseEntity::ok)

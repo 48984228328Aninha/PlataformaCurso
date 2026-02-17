@@ -40,4 +40,11 @@ public class DisciplinaMapper {
                 disciplina.getNomeDisciplina(),
                 disciplina.getDescricao());
     }
+
+    public static Disciplina toDisciplinaDto(DisciplinaInterfaceDto disciplinaInterfaceDto) {
+        return new Disciplina(
+                disciplinaInterfaceDto.getIdDisciplina(),
+                disciplinaInterfaceDto.getNomeDisciplina(),
+                disciplinaInterfaceDto.getDescricaoDisciplina());
+    }
 }

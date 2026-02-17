@@ -47,4 +47,11 @@ public class ResultadoMapper {
                 resultado.getDataSubmissao(),
                 resultado.getFeedback());
     }
+
+    public static Resultado toResultadoDto(ResultadoInterfaceDto resultadoInterfaceDto) {
+        return new Resultado(
+                resultadoInterfaceDto.getIdResultado(),
+                resultadoInterfaceDto.getNotaObtida(),
+                resultadoInterfaceDto.getUsuario());
+    }
 }

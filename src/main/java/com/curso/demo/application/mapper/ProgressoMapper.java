@@ -41,4 +41,11 @@ public class ProgressoMapper {
                 progresso.getAulasConcluidas(),
                 progresso.getUltimaAtividadeRealizada());
     }
+
+    public static Progresso toProgressoDto(ProgressoInterfaceDto progressoInterfaceDto) {
+        return new Progresso(
+                progressoInterfaceDto.getIdProgresso(),
+                progressoInterfaceDto.getAulasConcluidas(),
+                progressoInterfaceDto.getUltimaAtividadeRealizada());
+    }
 }

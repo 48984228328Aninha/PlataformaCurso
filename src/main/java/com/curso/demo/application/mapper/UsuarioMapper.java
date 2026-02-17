@@ -58,4 +58,11 @@ public class UsuarioMapper {
                 usuario.getEmail(),
                 usuario.getPassword());
     }
+
+    public static Usuario toUsuarioDto(UsuarioInterfaceDto usuarioInterfaceDto) {
+        return new Usuario(
+                usuarioInterfaceDto.getUsername(),
+                usuarioInterfaceDto.getPassword(),
+                usuarioInterfaceDto.getEmail());
+    }
 }

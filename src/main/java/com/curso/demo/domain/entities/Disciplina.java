@@ -12,6 +12,10 @@ public class Disciplina {
     public Disciplina() {
     }
 
+    /*disciplina.getIdDisciplina(),
+                disciplina.getNomeDisciplina(),
+                disciplina.getDescricao()); */
+
     public Disciplina(UUID idDisciplina, String nomeDisciplina, String descricaoDisciplina) {
         this.idDisciplina = idDisciplina;
         this.nomeDisciplina = nomeDisciplina;

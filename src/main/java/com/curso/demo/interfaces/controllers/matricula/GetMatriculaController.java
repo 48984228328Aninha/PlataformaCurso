@@ -1,5 +1,7 @@
 package com.curso.demo.interfaces.controllers.matricula;
 
+import java.util.UUID;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +23,7 @@ public class GetMatriculaController {
     }
 
     @GetMapping("/{idMatricula}")
-    public ResponseEntity<MatriculaInterfaceDto> getMatricula(@PathVariable Long idMatricula) {
+    public ResponseEntity<MatriculaInterfaceDto> getMatricula(@PathVariable UUID idMatricula) {
         Matricula matricula = getMatriculaById.executar(idMatricula);
         MatriculaInterfaceDto matriculaDto = MatriculaMapper.toMatriculaDto(matricula);
         return ResponseEntity.ok(matriculaDto);

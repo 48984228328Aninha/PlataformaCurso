@@ -36,16 +36,32 @@ public class Progresso {
         return aulasConcluidas;
     }
 
+    public void setAulasConcluidas(String aulasConcluidas) {
+        this.aulasConcluidas = aulasConcluidas;
+    }
+
     public int getTotalAulas() {
         return totalAulas;
+    }
+
+    public void setTotalAulas(int totalAulas) {
+        this.totalAulas = totalAulas;
     }
 
     public int getTempoTotalEstudado() {
         return tempoTotalEstudado;
     }
 
+    public void setTempoTotalEstudado(int tempoTotalEstudado) {
+        this.tempoTotalEstudado = tempoTotalEstudado;
+    }
+
     public String getUltimaAtividadeRealizada() {
         return ultimaAtividadeRealizada;
+    }
+
+    public void setUltimaAtividadeRealizada(String ultimaAtividadeRealizada) {
+        this.ultimaAtividadeRealizada = ultimaAtividadeRealizada;
     }
 
 }

@@ -17,7 +17,6 @@ public class AvaliacaoMapper {
                 3,
                 60,
                 avaliacaoInterfaceDto.getTipo().equals("Ativa")
-
         );
     }
 

@@ -48,4 +48,11 @@ public class MatriculaMapper {
                 matricula.getDataMatricula(),
                 matricula.getUsuario());
     }
+
+    public static Matricula toMatriculaDto(MatriculaInterfaceDto matriculaInterfaceDto) {
+        return new Matricula(
+                matriculaInterfaceDto.getIdMatricula(),
+                matriculaInterfaceDto.getCursoNome(),
+                matriculaInterfaceDto.getUsuarioMatriculaDto());
+    }
 }

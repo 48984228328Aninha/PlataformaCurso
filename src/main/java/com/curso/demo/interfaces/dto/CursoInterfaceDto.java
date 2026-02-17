@@ -21,7 +21,7 @@ public class CursoInterfaceDto {
 
     public static CursoInterfaceDto toCursoDto(CursoPersistenceEntity cursoPersistence) {
         return new CursoInterfaceDto(
-                cursoPersistence.getIdCurso(),
+                cursoPersistence.getId(),
                 cursoPersistence.getNome(),
                 cursoPersistence.getDescricao());
 

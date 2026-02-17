@@ -77,4 +77,32 @@ public class Avaliacao {
         this.statusAvaliacao = statusAvaliacao;
     }
 
+    public void setTitulo(String tituloAvaliacao) {
+        this.tituloAvaliacao = tituloAvaliacao;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setDisciplinaRelacionada(String disciplinaRelacionada) {
+        this.disciplinaRelacionada = disciplinaRelacionada;
+    }
+
+    public void setNotaMaxima(double notaMaxima) {
+        this.notaMaxima = notaMaxima;
+    }
+
+    public void setNotaMinima(double notaMinimaAprovacao) {
+        this.notaMinimaAprovacao = notaMinimaAprovacao;
+    }
+
+    public void setQuantidadeTentativas(int quantidadeTentativas) {
+        this.quantidadeTentativas = quantidadeTentativas;
+    }
+
+    public void setTempoLimite(int tempoLimite) {
+        this.tempoLimite = tempoLimite;
+    }
+
 }

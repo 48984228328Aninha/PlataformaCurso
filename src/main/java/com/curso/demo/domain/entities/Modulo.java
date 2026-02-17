@@ -23,6 +23,12 @@ public class Modulo {
         this.statusModulo = statusModulo;
     }
 
+    public Modulo(UUID idModulo, String tituloModulo, String descricaoModulo) {
+        this.idModulo = idModulo;
+        this.tituloModulo = tituloModulo;
+        this.descricaoModulo = descricaoModulo;
+    }
+
     public Modulo(UUID idModulo, String tituloModulo, String descricaoModulo, int ordemModulo,
             String cursoRelacionado, int cargaHorariaModulo, String statusModulo) {
         this.idModulo = idModulo;

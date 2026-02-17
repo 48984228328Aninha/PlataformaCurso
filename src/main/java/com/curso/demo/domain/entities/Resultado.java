@@ -42,27 +42,55 @@ public class Resultado {
         return usuario;
     }
 
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
     public String getAvaliacao() {
         return avaliacao;
+    }
+
+    public void setAvaliacao(String avaliacao) {
+        this.avaliacao = avaliacao;
     }
 
     public Double getNotaObtida() {
         return notaObtida;
     }
 
+    public void setNotaObtida(Double notaObtida) {
+        this.notaObtida = notaObtida;
+    }
+
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Timestamp getDataSubmissao() {
         return dataSubmissao;
     }
 
+    public void setDataSubmissao(Timestamp dataSubmissao) {
+        this.dataSubmissao = dataSubmissao;
+    }
+
     public int getTentativa() {
         return tentativa;
     }
 
+    public void setTentativa(int tentativa) {
+        this.tentativa = tentativa;
+    }
+
     public String getFeedback() {
         return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 }

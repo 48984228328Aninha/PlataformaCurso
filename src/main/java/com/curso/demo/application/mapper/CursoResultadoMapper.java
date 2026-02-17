@@ -40,4 +40,11 @@ public class CursoResultadoMapper {
                 curso.getNome(),
                 curso.getDescricao());
     }
+
+    public static Curso toCursoDto(CursoInterfaceDto cursoInterfaceDto) {
+        return new Curso(
+                cursoInterfaceDto.getIdCurso(),
+                cursoInterfaceDto.getNomeCursoInterface(),
+                cursoInterfaceDto.getDescricaoCursoInterface());
+    }
 }

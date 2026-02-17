@@ -37,4 +37,11 @@ public class ModuloMapper {
                 modulo.getCargaHoraria(),
                 modulo.getStatusModulo());
     }
+
+    public static Modulo toModuloDto(ModuloInterfaceDto moduloInterfaceDto) {
+        return new Modulo(
+                moduloInterfaceDto.getIdModulo(),
+                moduloInterfaceDto.getTituloModulo(),
+                moduloInterfaceDto.getDescricaoModulo());
+    }
 }
