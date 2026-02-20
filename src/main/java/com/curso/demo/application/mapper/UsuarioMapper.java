@@ -65,4 +65,11 @@ public class UsuarioMapper {
                 usuarioInterfaceDto.getPassword(),
                 usuarioInterfaceDto.getEmail());
     }
+
+    public static Usuario toDomain(UsuarioInterfaceDto usuarioInterfaceDto) {
+        return new Usuario(
+                usuarioInterfaceDto.getUsername(),
+                usuarioInterfaceDto.getPassword(),
+                usuarioInterfaceDto.getEmail());
+    }
 }

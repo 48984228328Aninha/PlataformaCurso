@@ -22,7 +22,7 @@ public class PostModuloController {
 
     @PostMapping("modulo")
     public ResponseEntity<ModuloInterfaceDto> criarModulo(@RequestBody ModuloInterfaceDto dto) {
-        Modulo modulo = ModuloMapper.toModuloDto(dto);
+        Modulo modulo = ModuloMapper.toDomain(dto);
         Modulo salvo = createModulo.executar(modulo);
         return ResponseEntity.ok(ModuloMapper.toModuloDto(salvo));
     }

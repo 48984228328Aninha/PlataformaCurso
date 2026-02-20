@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/criarAvaliacao")
+@RequestMapping("/criarUsuario")
 public class PostUserController {
     private final CreateUser createUser;
 
@@ -22,7 +22,7 @@ public class PostUserController {
         this.createUser = createUser;
     }
 
-    @PostMapping("path")
+    @PostMapping("usuario")
     public ResponseEntity<UsuarioInterfaceDto> criar(@RequestBody ResultadoInterfaceDto dto) {
         Usuario usuario = UsuarioMapper.toDomain(null, null, null, null, null);
         Usuario salvo = createUser.executar(usuario);

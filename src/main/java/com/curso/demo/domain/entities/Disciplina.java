@@ -12,10 +12,6 @@ public class Disciplina {
     public Disciplina() {
     }
 
-    /*disciplina.getIdDisciplina(),
-                disciplina.getNomeDisciplina(),
-                disciplina.getDescricao()); */
-
     public Disciplina(UUID idDisciplina, String nomeDisciplina, String descricaoDisciplina) {
         this.idDisciplina = idDisciplina;
         this.nomeDisciplina = nomeDisciplina;
@@ -32,6 +28,10 @@ public class Disciplina {
 
     public UUID getIdDisciplina() {
         return idDisciplina;
+    }
+
+    public void setNomeDisciplina(String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
     }
 
     public String getNomeDisciplina() {

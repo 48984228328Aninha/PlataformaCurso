@@ -23,7 +23,7 @@ public class PostCursoController {
 
     @PostMapping("curso")
     public ResponseEntity<CursoInterfaceDto> criarCurso(@RequestBody CursoInterfaceDto dto) {
-        Curso curso = CursoResultadoMapper.toCursoDto(dto);
+        Curso curso = CursoResultadoMapper.toDomain(dto);
         Curso salvo = createCurso.executar(curso);
         return ResponseEntity.ok(CursoResultadoMapper.toCursoDto(salvo));
     }

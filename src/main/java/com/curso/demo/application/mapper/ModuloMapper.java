@@ -38,7 +38,7 @@ public class ModuloMapper {
                 modulo.getStatusModulo());
     }
 
-    public static Modulo toModuloDto(ModuloInterfaceDto moduloInterfaceDto) {
+    public static Modulo toDomain(ModuloInterfaceDto moduloInterfaceDto) {
         return new Modulo(
                 moduloInterfaceDto.getIdModulo(),
                 moduloInterfaceDto.getTituloModulo(),
