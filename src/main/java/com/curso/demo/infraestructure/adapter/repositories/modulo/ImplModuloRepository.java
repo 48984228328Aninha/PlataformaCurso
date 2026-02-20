@@ -34,4 +34,9 @@ public class ImplModuloRepository implements ModuloDomainRepository {
         return ModuloMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaModuloRepository.deleteById(id);
+    }
+
 }

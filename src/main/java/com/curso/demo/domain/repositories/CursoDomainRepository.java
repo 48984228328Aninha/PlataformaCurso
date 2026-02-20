@@ -9,4 +9,6 @@ public interface CursoDomainRepository {
     Optional<Curso> findById(UUID idCurso);
 
     Curso save(Curso curso);
+
+    void deleteById(UUID id);
 }

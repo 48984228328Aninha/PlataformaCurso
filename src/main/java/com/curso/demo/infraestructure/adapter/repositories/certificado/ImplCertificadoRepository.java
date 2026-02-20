@@ -22,7 +22,7 @@ public class ImplCertificadoRepository implements CertificadoDomainRepository {
     @Override
     public Optional<Certificado> findById(UUID id) {
         return jpaCertificadoRepository.findById(id)
-        .map(CertificadoMapper::toDomain);
+                .map(CertificadoMapper::toDomain);
     }
 
     @Override
@@ -32,6 +32,11 @@ public class ImplCertificadoRepository implements CertificadoDomainRepository {
         CertificadoPersistenceEntity saved = jpaCertificadoRepository.save(certificadoPersistenceEntity);
 
         return CertificadoMapper.toDomain(saved);
+    }
+
+    @Override
+    public void deleteById(UUID id) {
+        jpaCertificadoRepository.deleteById(id);
     }
 
 }

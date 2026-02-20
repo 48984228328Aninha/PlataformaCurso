@@ -34,4 +34,9 @@ public class ImplMatriculaRepository implements MatriculaDomainRepository {
         return MatriculaMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaMatriculaRepository.deleteById(id);
+    }
+
 }

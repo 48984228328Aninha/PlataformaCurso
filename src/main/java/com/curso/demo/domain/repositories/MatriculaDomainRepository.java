@@ -9,4 +9,6 @@ public interface MatriculaDomainRepository {
     Optional<Matricula> findById(UUID id);
 
     Matricula save(Matricula matricula);
+
+    void deleteById(UUID id);
 }

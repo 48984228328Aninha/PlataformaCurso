@@ -34,4 +34,9 @@ public class ImplUsuarioRepository implements UsuarioDomainRepository {
         return UsuarioMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaUsuarioRepository.deleteById(id);
+    }
+
 }

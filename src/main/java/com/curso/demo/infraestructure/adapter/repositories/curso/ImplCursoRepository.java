@@ -34,4 +34,9 @@ public class ImplCursoRepository implements CursoDomainRepository {
         return CursoResultadoMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaCursoRepository.deleteById(id);
+    }
+
 }

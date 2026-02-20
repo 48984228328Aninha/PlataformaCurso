@@ -34,4 +34,9 @@ public class ImplResultadoRepository implements ResultadoDomainRepository {
         return ResultadoMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaResultadoRepository.deleteById(id);
+    }
+
 }

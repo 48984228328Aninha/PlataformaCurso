@@ -9,4 +9,6 @@ public interface DisciplinaDomainRepository {
     Optional<Disciplina> findById(UUID id);
 
     Disciplina save(Disciplina disciplina);
+
+    void deleteById(UUID id);
 }

@@ -9,4 +9,6 @@ public interface AvaliacaoDomainRepository {
     Optional<Avaliacao> findById(UUID id);
 
     Avaliacao save(Avaliacao avaliacao);
+
+    void deleteById(UUID id);
 }

@@ -34,4 +34,9 @@ public class ImplDisciplinaRepository implements DisciplinaDomainRepository {
         return DisciplinaMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaDisciplinaRepository.deleteById(id);
+    }
+
 }

@@ -33,4 +33,10 @@ public class ImplAvaliacaoRepository implements AvaliacaoDomainRepository {
 
         return AvaliacaoMapper.toDomain(saved);
     }
+
+    @Override
+    public void deleteById(UUID id) {
+        avaliacaoRepository.deleteById(id);
+
+    }
 }

@@ -9,4 +9,6 @@ public interface ResultadoDomainRepository {
     Optional<Resultado> findById(UUID id);
 
     Resultado save(Resultado resultado);
+
+    void deleteById(UUID id);
 }

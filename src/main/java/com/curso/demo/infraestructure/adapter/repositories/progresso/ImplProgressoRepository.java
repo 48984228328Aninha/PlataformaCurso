@@ -34,4 +34,9 @@ public class ImplProgressoRepository implements ProgressoDomainRepository {
         return ProgressoMapper.toDomain(saved);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        jpaProgressoRepository.deleteById(id);
+    }
+
 }

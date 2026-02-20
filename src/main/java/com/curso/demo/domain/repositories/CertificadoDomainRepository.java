@@ -9,4 +9,6 @@ public interface CertificadoDomainRepository {
     Optional<Certificado> findById(UUID id);
 
     Certificado save(Certificado certificado);
+
+    void deleteById(UUID id);
 }

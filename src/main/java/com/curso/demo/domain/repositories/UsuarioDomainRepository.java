@@ -9,4 +9,6 @@ public interface UsuarioDomainRepository {
     Optional<Usuario> findById(UUID id);
 
     Usuario save(Usuario usuario);
+
+    void deleteById(UUID id);
 }

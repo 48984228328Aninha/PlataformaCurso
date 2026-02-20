@@ -9,4 +9,6 @@ public interface ProgressoDomainRepository {
     Optional<Progresso> findById(UUID id);
 
     Progresso save(Progresso progresso);
+
+    void deleteById(UUID id);
 }

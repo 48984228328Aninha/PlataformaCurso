@@ -9,4 +9,6 @@ public interface ModuloDomainRepository {
     Optional<Modulo> findById(UUID id);
 
     Modulo save(Modulo modulo);
+
+    void deleteById(UUID id);
 }
