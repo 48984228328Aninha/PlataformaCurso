@@ -67,8 +67,8 @@ O projeto segue os princípios da **Clean Architecture** e foca em alta coesão 
 ---
 
 ## Próximos passos:
-- [ ] Escrever controllers para cada entidade, com get, put, post e delete 
-- [ ] Descrever regras de negócio no service
+- [x] Escrever controllers para cada entidade, com get, put, post e delete 
+- [x] Descrever regras de negócio no service
 - [ ] Colocar comportamento para cada role
 - [x] Fazer o front end em Angular + Tailwind
 - [x] Escrever os domains entities
