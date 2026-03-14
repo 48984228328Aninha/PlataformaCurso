@@ -83,18 +83,6 @@ O projeto segue os princípios da **Clean Architecture** e foca em alta coesão 
 - [x] Construir o banco de dados em PostgreSQL
 - [x] Usar nginx e cloudfare
 
-## Como Rodar o Projeto
-
-### 1. Pré-requisitos
-* Docker e Docker Compose instalados.
-* (Opcional) Java 21 e Maven 3.9+ se desejar rodar fora do container.
-
-### 2. Clonar o Repositório
-```bash
-git clone [https://github.com/48984228328@Aninha/PlataformaCurso.git](https://github.com/48984228328@Aninha/PlataformaCurso.git)
-cd PlataformaCurso
-```
-
 # Infraestrutura do sistema
 
 O projeto utiliza uma arquitetura de microserviços containerizada, garantindo isolamento, segurança e facilidade de deploy.
