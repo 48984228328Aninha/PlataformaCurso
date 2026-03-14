@@ -79,10 +79,11 @@ O projeto segue os princípios da **Clean Architecture** e foca em alta coesão 
 - [ ] Implementar kafka para mensagens
 - [ ] Implementar Prometheus para visualização
 - [ ] Colocar ClickHouse
-- [ ] Colocar Docker
+- [x] Colocar Docker
 - [x] Construir o banco de dados em PostgreSQL
+- [x] Usar nginx e cloudfare
 
-## 🚀 Como Rodar o Projeto
+## Como Rodar o Projeto
 
 ### 1. Pré-requisitos
 * Docker e Docker Compose instalados.
@@ -92,3 +93,32 @@ O projeto segue os princípios da **Clean Architecture** e foca em alta coesão 
 ```bash
 git clone [https://github.com/48984228328@Aninha/PlataformaCurso.git](https://github.com/48984228328@Aninha/PlataformaCurso.git)
 cd PlataformaCurso
+```
+
+# Infraestrutura do sistema
+
+O projeto utiliza uma arquitetura de microserviços containerizada, garantindo isolamento, segurança e facilidade de deploy.
+
+### Camadas de Segurança e Infra
+* **Proxy Reverso (Nginx):** Atua como o único ponto de entrada para as requisições, protegendo a API Java.
+* **Autenticação Básica (HTTP Basic Auth):** Camada extra de segurança via `.htpasswd` (algoritmo bcrypt/apr1) para filtrar acessos indesejados e bots.
+* **Cloudflare Tunnel:** Exposição segura para a internet sem abertura de portas no roteador, ocultando o IP real da máquina servidora.
+* **Docker Network:** Isolamento total entre os serviços, utilizando `aliases` para comunicação interna (o Java acessa o banco via `localhost` dentro do contexto do container).
+
+## Decisões Técnicas para Alta Performance
+Considerando a execução em hardware com recursos limitados (PC antigo), foram tomadas as seguintes decisões:
+* **Imagens Alpine:** Uso sistemático de distribuições **Alpine Linux** para os containers (Postgres, Nginx e Apache), reduzindo o consumo de RAM e o tamanho das imagens em mais de 70%.
+* **Single-Stage Build Otimizado:** Dockerfile estruturado para gerar builds enxutos e rápidos.
+* **Persistência com PostgreSQL 15-alpine:** Escolha estratégica por uma versão estável e leve para o gerenciamento de dados.
+
+## Como Executar o Ambiente
+
+### Pré-requisitos
+* Docker e Docker Compose instalados.
+* Um domínio configurado na Cloudflare (para o túnel).
+
+### Instalação e Deploy Local
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/seu-usuario/seu-projeto.git](https://github.com/seu-usuario/seu-projeto.git)
+   cd seu-projeto/infra
