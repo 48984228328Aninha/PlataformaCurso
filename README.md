@@ -108,5 +108,5 @@ Considerando a execução em hardware com recursos limitados (PC antigo), foram 
 ### Instalação e Deploy Local
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/seu-projeto.git](https://github.com/seu-usuario/seu-projeto.git)
-   cd seu-projeto/infra
+   git clone [https://github.com/48984228328Aninha/PlataformaCurso](https://github.com/48984228328@Aninha/PlataformaCurso.git)
+   cd PlataformaCurso/infra
